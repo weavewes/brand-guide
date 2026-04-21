@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Marca — Weaves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-indigo: #1E2A4A;
+      --electric-teal: #00B4A6;
+      --warm-amber: #F59E0B;
+      --off-white: #F8F9FC;
+      --dark-bg: #111827;
+      --text-primary: #1F2937;
+      --text-secondary: #6B7280;
+      --green-positive: #10B981;
+      --red-error: #EF4444;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--deep-indigo);
+      color: #fff;
+      padding: 2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .weaves-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -1px;
+    }
+
+    .weaves-logo span { color: var(--electric-teal); }
+
+    .header-tag {
+      font-size: 0.85rem;
+      background: var(--electric-teal);
+      color: var(--deep-indigo);
+      padding: 0.25rem 0.75rem;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--deep-indigo);
+      color: #fff;
+      padding: 5rem 0 6rem;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--electric-teal);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .hero h1 .highlight { color: var(--electric-teal); }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    /* SECTIONS */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section:nth-child(even) { background: var(--off-white); }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--electric-teal);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--deep-indigo);
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin-bottom: 3rem;
+    }
+
+    /* IDENTITY */
+    .identity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .tagline-card {
+      background: var(--deep-indigo);
+      color: #fff;
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+
+    .tagline-card h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--electric-teal);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .tagline-card p {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .pitch-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+
+    .pitch-card h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--electric-teal);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .pitch-card p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+    }
+
+    .identity-traits {
+      margin-top: 3rem;
+    }
+
+    .traits-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+
+    .traits-list {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .trait {
+      background: var(--deep-indigo);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* COLORS */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .color-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .color-swatch {
+      height: 100px;
+    }
+
+    .color-info {
+      padding: 1.25rem;
+    }
+
+    .color-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .color-use {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .color-codes {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    .color-code {
+      background: var(--off-white);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      color: var(--text-secondary);
+    }
+
+    .semaphore-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 600px;
+    }
+
+    .sem-card {
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+
+    .sem-card.green { background: #ecfdf5; }
+    .sem-card.amber { background: #fffbeb; }
+    .sem-card.red { background: #fef2f2; }
+
+    .sem-dot {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+    }
+
+    .sem-card.green .sem-dot { background: var(--green-positive); }
+    .sem-card.amber .sem-dot { background: var(--warm-amber); }
+    .sem-card.red .sem-dot { background: var(--red-error); }
+
+    .sem-label { font-weight: 600; font-size: 0.9rem; }
+    .sem-hex { font-family: 'Space Grotesk', monospace; font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem; }
+
+    /* TYPOGRAPHY */
+    .type-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .type-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .type-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .type-card-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--deep-indigo);
+    }
+
+    .type-card-role {
+      font-size: 0.8rem;
+      color: var(--electric-teal);
+      font-weight: 500;
+    }
+
+    .type-samples { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .type-sample {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 0;
+    }
+
+    .type-weight {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      min-width: 120px;
+    }
+
+    .type-sample span:last-child {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-primary);
+    }
+
+    .type-card.inter-card .type-sample span:last-child { font-family: 'Inter', sans-serif; }
+    .type-card.space-card .type-sample span:last-child { font-family: 'Space Grotesk', sans-serif; }
+
+    .type-avoid {
+      background: #fef2f2;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .type-avoid h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--red-error);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .avoid-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .avoid-item {
+      background: #fff;
+      border: 1px solid #fecaca;
+      border-radius: 99px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      color: var(--red-error);
+    }
+
+    /* VOICE */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .voice-table {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .voice-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .voice-table th {
+      background: var(--deep-indigo);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .voice-table td {
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .voice-table tr:last-child td { border-bottom: none; }
+
+    .copy-example {
+      background: var(--off-white);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .copy-example h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .copy-pair { margin-bottom: 1.5rem; }
+
+    .copy-pair .label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+
+    .label-avoid { background: #fef2f2; color: var(--red-error); }
+    .label-use { background: #ecfdf5; color: var(--green-positive); }
+
+    .copy-pair p {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      font-style: italic;
+    }
+
+    /* MESSAGING */
+    .msg-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .msg-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .msg-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--deep-indigo);
+      margin-bottom: 0.5rem;
+    }
+
+    .msg-card .for {
+      font-size: 0.8rem;
+      color: var(--electric-teal);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .msg-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .msg-card .cta-link {
+      font-size: 0.85rem;
+      color: var(--electric-teal);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .roi-section {
+      background: var(--deep-indigo);
+      border-radius: 16px;
+      padding: 2.5rem;
+      color: #fff;
+    }
+
+    .roi-section h4 {
+      font-size: 0.85rem;
+      color: var(--electric-teal);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.25rem;
+    }
+
+    .roi-template {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .metric-table {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .metric-col {
+      padding: 1rem;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .metric-col:last-child { border-right: none; }
+
+    .metric-col h5 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--electric-teal);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .metric-col p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+
+    /* REFERENTS */
+    .referents-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+
+    .ref-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+
+    .ref-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--deep-indigo);
+      margin-bottom: 0.25rem;
+    }
+
+    .ref-name {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .ref-lessons {
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .ref-lessons li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
+
+    .benchmark-table {
+      margin-top: 3rem;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .benchmark-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .benchmark-table th {
+      background: var(--deep-indigo);
+      color: #fff;
+      padding: 1rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    .benchmark-table td {
+      padding: 0.85rem 1rem;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .check-yes { color: var(--green-positive); }
+    .check-warn { color: var(--warm-amber); }
+    .check-no { color: var(--red-error); }
+
+    /* CHECKLIST */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+    }
+
+    .check-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--electric-teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .check-text {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .priority-badges {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .priority-badge {
+      flex: 1;
+      padding: 1.5rem;
+      border-radius: 16px;
+    }
+
+    .priority-badge.high { background: var(--deep-indigo); color: #fff; }
+    .priority-badge.medium { background: var(--electric-teal); color: #fff; }
+    .priority-badge.low { background: var(--warm-amber); color: var(--deep-indigo); }
+
+    .priority-badge h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .priority-badge ul {
+      list-style: none;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-bg);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-logo span { color: var(--electric-teal); }
+
+    footer p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; gap: 1rem; }
+      nav { flex-wrap: wrap; justify-content: center; }
+      .hero h1 { font-size: 2.25rem; }
+      .identity-grid { grid-template-columns: 1fr; }
+      .type-showcase { grid-template-columns: 1fr; }
+      .voice-grid { grid-template-columns: 1fr; }
+      .msg-services { grid-template-columns: 1fr; }
+      .referents-grid { grid-template-columns: 1fr 1fr; }
+      .metric-table { grid-template-columns: 1fr; }
+      .checklist-grid { grid-template-columns: 1fr; }
+      .priority-badges { flex-direction: column; }
+      .semaphore-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .referents-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="weaves-logo">Wea<span>ves</span></div>
+        <span class="header-tag">Brand Manual v1.0</span>
+      </div>
+      <nav>
+        <a href="#identidad">Identidad</a>
+        <a href="#colores">Colores</a>
+        <a href="#tipografia">Tipografía</a>
+        <a href="#voz">Tono de Voz</a>
+        <a href="#messaging">Messaging</a>
+        <a href="#referentes">Referentes</a>
+        <a href="#checklist">Checklist</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Manual de Marca — Versión 1.0
+      </div>
+      <h1>La marca <span class="highlight">Weaves</span>:<br>Identidad, voz y dirección visual</h1>
+      <p>Este manual define cómo se presenta Weaves al mundo: desde el color y la tipografía hasta el tono de voz y el messaging por servicio.</p>
+      <div class="hero-meta">
+        <span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg> PRISMA — Chief Creative Officer</span>
+        <span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2026-04-21</span>
+        <span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> weavewp.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. IDENTIDAD -->
+  <section class="section" id="identidad">
+    <div class="section-inner">
+      <div class="section-label">01 — Identidad</div>
+      <h2 class="section-title">Quién es Weaves</h2>
+      <p class="section-desc">Weaves no vende tecnología. Vende horas de trabajo recuperadas, errores eliminados y costes reducidos. Así nos presentamos.</p>
+
+      <div class="identity-grid">
+        <div class="tagline-card">
+          <h3>Tagline propuesta</h3>
+          <p>"Recupera 20 horas al mes. Sin errores. Sin contratar."</p>
+        </div>
+        <div class="pitch-card">
+          <h3>Elevator Pitch</h3>
+          <p>Weaves automatiza los procesos operativos de tu empresa con IA — ahorrando horas de trabajo manual, eliminando errores y reduciendo costes. Lo dejamos funcionando desde el primer mes, sin letra pequeña.</p>
+        </div>
+      </div>
+
+      <div class="identity-traits">
+        <div class="traits-title">Personalidad de marca</div>
+        <div class="traits-list">
+          <span class="trait">Práctica</span>
+          <span class="trait">Honesta</span>
+          <span class="trait">Protectora</span>
+          <span class="trait">Directa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. COLORES -->
+  <section class="section" id="colores" style="background: var(--off-white);">
+    <div class="section-inner">
+      <div class="section-label">02 — Paleta de Colores</div>
+      <h2 class="section-title">Sistema de color</h2>
+      <p class="section-desc">Tres colores principales que transmiten tecnología, confianza e innovación — con acentos de urgencia positiva.</p>
+
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #1E2A4A;"></div>
+          <div class="color-info">
+            <div class="color-name">Deep Indigo</div>
+            <div class="color-use">Primario — Headers, botones principales</div>
+            <div class="color-codes">
+              <span class="color-code">#1E2A4A</span>
+              <span class="color-code">RGB 30, 42, 74</span>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #00B4A6;"></div>
+          <div class="color-info">
+            <div class="color-name">Electric Teal</div>
+            <div class="color-use">Secundario — Acentos, iconos, enlaces</div>
+            <div class="color-codes">
+              <span class="color-code">#00B4A6</span>
+              <span class="color-code">RGB 0, 180, 166</span>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #F59E0B;"></div>
+          <div class="color-info">
+            <div class="color-name">Warm Amber</div>
+            <div class="color-use">Acento — CTAs, métricas destacadas</div>
+            <div class="color-codes">
+              <span class="color-code">#F59E0B</span>
+              <span class="color-code">RGB 245, 158, 11</span>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #F8F9FC;"></div>
+          <div class="color-info">
+            <div class="color-name">Off-White</div>
+            <div class="color-use">Fondo principal de secciones</div>
+            <div class="color-codes">
+              <span class="color-code">#F8F9FC</span>
+              <span class="color-code">RGB 248, 249, 252</span>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #111827;"></div>
+          <div class="color-info">
+            <div class="color-name">Dark Background</div>
+            <div class="color-use">Footer, secciones de contraste</div>
+            <div class="color-codes">
+              <span class="color-code">#111827</span>
+              <span class="color-code">RGB 17, 24, 39</span>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #1F2937;"></div>
+          <div class="color-info">
+            <div class="color-name">Text Primary</div>
+            <div class="color-use">Cuerpo de texto principal</div>
+            <div class="color-codes">
+              <span class="color-code">#1F2937</span>
+              <span class="color-code">RGB 31, 41, 55</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1rem; font-weight: 600; color: var(--deep-indigo); margin-bottom: 1rem;">Sistema de semáforo (para métricas en proposals)</h3>
+      <div class="semaphore-grid">
+        <div class="sem-card green">
+          <div class="sem-dot"></div>
+          <div class="sem-label">Positivo / Bueno</div>
+          <div class="sem-hex">#10B981</div>
+        </div>
+        <div class="sem-card amber">
+          <div class="sem-dot"></div>
+          <div class="sem-label">Alerta / Neutro</div>
+          <div class="sem-hex">#F59E0B</div>
+        </div>
+        <div class="sem-card red">
+          <div class="sem-dot"></div>
+          <div class="sem-label">Error / Crítico</div>
+          <div class="sem-hex">#EF4444</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TIPOGRAFÍA -->
+  <section class="section" id="tipografia">
+    <div class="section-inner">
+      <div class="section-label">03 — Tipografía</div>
+      <h2 class="section-title">Sistema tipográfico</h2>
+      <p class="section-desc">Dos familias tipográficas con roles claros: Inter para lectura, Space Grotesk para impacto y métricas.</p>
+
+      <div class="type-showcase">
+        <div class="type-card inter-card">
+          <div class="type-card-header">
+            <span class="type-card-name">Inter</span>
+            <span class="type-card-role">Principal — Lectura</span>
+          </div>
+          <div class="type-samples">
+            <div class="type-sample"><span class="type-weight">Light (300)</span><span style="font-weight:300; font-size:1.1rem;">La IA que hace el trabajo.</span></div>
+            <div class="type-sample"><span class="type-weight">Regular (400)</span><span style="font-weight:400;">La IA que hace el trabajo.</span></div>
+            <div class="type-sample"><span class="type-weight">Medium (500)</span><span style="font-weight:500;">La IA que hace el trabajo.</span></div>
+            <div class="type-sample"><span class="type-weight">Semibold (600)</span><span style="font-weight:600;">La IA que hace el trabajo.</span></div>
+            <div class="type-sample"><span class="type-weight">Bold (700)</span><span style="font-weight:700;">La IA que hace el trabajo.</span></div>
+          </div>
+        </div>
+        <div class="type-card space-card">
+          <div class="type-card-header">
+            <span class="type-card-name">Space Grotesk</span>
+            <span class="type-card-role">Display — Impacto</span>
+          </div>
+          <div class="type-samples">
+            <div class="type-sample"><span class="type-weight">Regular (400)</span><span style="font-weight:400;">40%</span></div>
+            <div class="type-sample"><span class="type-weight">Medium (500)</span><span style="font-weight:500;">20h</span></div>
+            <div class="type-sample"><span class="type-weight">Semibold (600)</span><span style="font-weight:600;">ROI</span></div>
+            <div class="type-sample"><span class="type-weight">Bold (700)</span><span style="font-weight:700;">7 meses</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-avoid">
+        <h4>Evitar estas tipografías</h4>
+        <div class="avoid-list">
+          <span class="avoid-item">Comic Sans</span>
+          <span class="avoid-item">Papyrus</span>
+          <span class="avoid-item">Brush Script</span>
+          <span class="avoid-item">Roboto (por defecto)</span>
+          <span class="avoid-item">Arial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TONO DE VOZ -->
+  <section class="section" id="voz" style="background: var(--off-white);">
+    <div class="section-inner">
+      <div class="section-label">04 — Tono de Voz</div>
+      <h2 class="section-title">Cómo hablamos</h2>
+      <p class="section-desc">Weaves habla como un consultor directo y confiable — no como un vendor, no como un amigo, no como un académico.</p>
+
+      <div class="voice-grid">
+        <div class="voice-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Dimensión</th>
+                <th>Nivel</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Formal → Casual</td>
+                <td><strong>7/10</strong></td>
+                <td>Profesional pero cercano</td>
+              </tr>
+              <tr>
+                <td>Frío → Cálido</td>
+                <td><strong>8/10</strong></td>
+                <td>Protectors. Trata el negocio del cliente como si fuera suyo</td>
+              </tr>
+              <tr>
+                <td>Literal → Emotivo</td>
+                <td><strong>6/10</strong></td>
+                <td>Los datos convencen. Las historias conectan</td>
+              </tr>
+              <tr>
+                <td>Genérico → Específico</td>
+                <td><strong>9/10</strong></td>
+                <td>Números concretos, casos de éxito reales</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="voice-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Palabras que USAMOS</th>
+                <th>Palabras que EVITAMOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ahorramos, recuperamos, liberamos</td>
+                <td>"Soluciones", "Plataforma"</td>
+              </tr>
+              <tr>
+                <td>implementamos, desplegamos, conectamos</td>
+                <td>"revolucionamos", "estado del arte"</td>
+              </tr>
+              <tr>
+                <td>transparente, claro, sin sorpresas</td>
+                <td>"No dude en contactarnos"</td>
+              </tr>
+              <tr>
+                <td>impacto, retorno, ahorro, eficiencia</td>
+                <td>"transformación digital"</td>
+              </tr>
+              <tr>
+                <td>primer mes, 30 días, desde el día 1</td>
+                <td>"Le vamos a ayudar"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="copy-example">
+        <h4>Ejemplos de copy por contexto</h4>
+        <div class="copy-pair">
+          <span class="label label-avoid">❌ Evitar</span>
+          <p>"Automatización con IA para Empresas"</p>
+        </div>
+        <div class="copy-pair">
+          <span class="label label-use">✅ Usar</span>
+          <p>"Recupera 20 horas al mes de trabajo manual. Sin errores. Sin contratar más personal."</p>
+        </div>
+        <div class="copy-pair">
+          <span class="label label-avoid">❌ Evitar</span>
+          <p>"Ver el caso de éxito completo"</p>
+        </div>
+        <div class="copy-pair">
+          <span class="label label-use">✅ Usar</span>
+          <p>"Ver cómo [Empresa] recuperó 20h/mes →"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MESSAGING -->
+  <section class="section" id="messaging">
+    <div class="section-inner">
+      <div class="section-label">05 — Messaging Framework</div>
+      <h2 class="section-title">Propositions por servicio</h2>
+      <p class="section-desc">Cada servicio tiene su mensaje: beneficioconcreto, audiencia clara, CTA directo.</p>
+
+      <div class="msg-services">
+        <div class="msg-card">
+          <h4>Consultoría Estratégica</h4>
+          <div class="for">Para: CEO / Propietario de Pyme</div>
+          <p>Te entregamos una hoja de ruta clara: qué automatizar primero, cuánto vais a ahorrar, y en qué orden hacerlo. Sin ambigüedad.</p>
+          <a href="#" class="cta-link">Quiero mi hoja de ruta →</a>
+        </div>
+        <div class="msg-card">
+          <h4>Atención al Cliente 24/7</h4>
+          <div class="for">Para: Director de Operaciones / CEO</div>
+          <p>Chatbots inteligentes que responden el 70% de las consultas sin intervención humana. Tus clientes получают respuesta instantánea.</p>
+          <a href="#" class="cta-link">Automatiza tu atención →</a>
+        </div>
+        <div class="msg-card">
+          <h4>Marketing y Redes Sociales</h4>
+          <div class="for">Para: CEO / Director de Marketing</div>
+          <p>Agentes de IA que planifican, redactan, publican y reportan. Tu marca presente en redes sin que tú toques una tecla.</p>
+          <a href="#" class="cta-link">Tu marketing trabajando solo →</a>
+        </div>
+        <div class="msg-card">
+          <h4>Automatización de Procesos (RPA)</h4>
+          <div class="for">Para: Director de Operaciones</div>
+          <p>Automatizamos facturación, sincronización de datos, reportes contables. Lo que antes hacía alguien en 3 horas, ahora se hace solo.</p>
+          <a href="#" class="cta-link">Menos manual, más estratégico →</a>
+        </div>
+        <div class="msg-card">
+          <h4>Integraciones y Flujos</h4>
+          <div class="for">Para: CEO / Director Tech</div>
+          <p>Conectamos tu CRM, email, WhatsApp y tienda para que la información fluya sola. Sin duplicados, sin errores de copia.</p>
+          <a href="#" class="cta-link">Un solo flujo. Sin manual →</a>
+        </div>
+        <div class="msg-card">
+          <h4>Sitio Web Inteligente</h4>
+          <div class="for">Para: CEO de Pyme</div>
+          <p>Una web que no solo muestra información: capta leads, responde preguntas y deriva a tu equipo automáticamente.</p>
+          <a href="#" class="cta-link">Tu web trabajando 24h →</a>
+        </div>
+      </div>
+
+      <div class="roi-section">
+        <h4>Cómo hablar de ROI</h4>
+        <p class="roi-template">"[Empresa similar a la tuya] recuperó [X]h/mes, redujo sus errores operativos en [Y]%, y amortizó la inversión en [Z] meses."</p>
+        <h4 style="margin-top:1.5rem; color:rgba(255,255,255,0.7);">Métricas por tipo de servicio</h4>
+        <div class="metric-table">
+          <div class="metric-col">
+            <h5>Atención</h5>
+            <p>Tickets reducidos (%)<br>Tiempo respuesta (s)</p>
+          </div>
+          <div class="metric-col">
+            <h5>Marketing</h5>
+            <p>Contenido/mes<br>Engagement rate (%)</p>
+          </div>
+          <div class="metric-col">
+            <h5>RPA</h5>
+            <p>Horas/mes ahorradas<br>Reducción errores (%)</p>
+          </div>
+          <div class="metric-col">
+            <h5>Integraciones</h5>
+            <p>Duplicados eliminados (%)<br>Sincronización real-time</p>
+          </div>
+          <div class="metric-col">
+            <h5>Web</h5>
+            <p>Leads captados/mes<br>Tasa conversión (%)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. REFERENTES -->
+  <section class="section" id="referentes" style="background: var(--off-white);">
+    <div class="section-inner">
+      <div class="section-label">06 — Referentes Visuales</div>
+      <h2 class="section-title">A quién emulate</h2>
+      <p class="section-desc">Cinco marcas B2B de referencia que definen el estándar en claridad, diseño y credibilidad.</p>
+
+      <div class="referents-grid">
+        <div class="ref-card">
+          <div class="ref-logo">Zapier</div>
+          <div class="ref-name">Claridad B2B</div>
+          <ul class="ref-lessons">
+            <li>Una idea por sección</li>
+            <li>Métricas siempre visibles</li>
+            <li>Copy ultra-específico</li>
+          </ul>
+        </div>
+        <div class="ref-card">
+          <div class="ref-logo">Make</div>
+          <div class="ref-name">Flujo visual</div>
+          <ul class="ref-lessons">
+            <li>Diagramas de flujo animados</li>
+            <li>Before/after poderoso</li>
+            <li>Conectores y flechas</li>
+          </ul>
+        </div>
+        <div class="ref-card">
+          <div class="ref-logo">UiPath</div>
+          <div class="ref-name">Autoridad y credibilidad</div>
+          <ul class="ref-lessons">
+            <li>Logos de clientes pesados</li>
+            <li>KPIs con nombre + número</li>
+            <li>Casos por industria</li>
+          </ul>
+        </div>
+        <div class="ref-card">
+          <div class="ref-logo">Linear</div>
+          <div class="ref-name">Diseño minimalista premium</div>
+          <ul class="ref-lessons">
+            <li>Sistema 8px grid</li>
+            <li>Space Grotesk para números</li>
+            <li>Color como énfasis</li>
+          </ul>
+        </div>
+        <div class="ref-card">
+          <div class="ref-logo">Notion</div>
+          <div class="ref-name">Herramienta estratégica</div>
+          <ul class="ref-lessons">
+            <li>Socio, no vendor</li>
+            <li>Storytelling en proposals</li>
+            <li>Propuesta aspiracional concreta</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CHECKLIST -->
+  <section class="section" id="checklist">
+    <div class="section-inner">
+      <div class="section-label">07 — Aplicación</div>
+      <h2 class="section-title">Checklist de marca</h2>
+      <p class="section-desc">Antes de publicar cualquier pieza de comunicación, verificar cada punto.</p>
+
+      <div class="checklist-grid">
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿El headline habla de resultado, no de tecnología?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿Hay al menos una cifra concreta?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿Se usa la paleta de colores correcta (#1E2A4A, #00B4A6, #F59E0B)?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿Los iconos son Lucide (no emojis)?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿El CTA es claro y único por sección?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿El copy evita las palabras a evitar?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿El nombre se escribe "Weaves" correctamente (W mayúscula)?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon">✓</div>
+          <div class="check-text">¿Hay testimonial con nombre + cargo + empresa?</div>
+        </div>
+      </div>
+
+      <div class="priority-badges">
+        <div class="priority-badge high">
+          <h5>Inmediato — Semana 1</h5>
+          <ul>
+            <li>Reemplazar emojis por Lucide Icons</li>
+            <li>Adoptar paleta de colores en web</li>
+            <li>Actualizar headline principal</li>
+          </ul>
+        </div>
+        <div class="priority-badge medium">
+          <h5>Corto plazo — Semanas 2-4</h5>
+          <ul>
+            <li>Actualizar proposals con nuevos templates</li>
+            <li>Reformatear sección de tech stack</li>
+            <li>Crear template de pitch deck</li>
+          </ul>
+        </div>
+        <div class="priority-badge low">
+          <h5>Mediano plazo — Mes 2</h5>
+          <ul>
+            <li>Landing pages por servicio</li>
+            <li>Kit de redes sociales</li>
+            <li>One-pager Partners</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Wea<span>ves</span></div>
+    <p>Brand Manual v1.0 — weavewp.com — Creado por PRISMA / NEXUS</p>
+  </footer>
+
+</body>
+</html>
